@@ -1,5 +1,4 @@
 from django.db import models
-from django.db import models
 from registration.models import Registration
 
 class Payment(models.Model):

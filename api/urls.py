@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path, include # type: ignore
 
 urlpatterns = [
     path('v1/users/', include('users.urls')),  

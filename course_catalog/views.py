@@ -30,8 +30,7 @@ def add_course(request):
         form = CourseForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('course_list'
-                            '')
+            return redirect('course_list')
     else:
         form = CourseForm()
     return render(request, 'course_catalog/add_course.html', {'form': form})

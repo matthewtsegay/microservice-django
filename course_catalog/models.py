@@ -1,5 +1,4 @@
 from django.db import models
-from django.db import models
 from django.contrib.auth import get_user_model
 from users.models import User
 class Course(models.Model):
@@ -10,4 +9,4 @@ class Course(models.Model):
     def __str__(self):
         return self.name
 
-# Create your models here.
+

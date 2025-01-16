@@ -1,88 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Course List</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white; /* White background */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        nav {
-            background-color: orange; /* Orange background for navigation */
-            width: 100%;
-            padding: 10px 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 20px; /* Spacing between navigation items */
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white; /* White text color */
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #ffcc00; /* Lighter shade of orange on hover */
-        }
-        h2 {
-            color: orange; /* Heading color */
-            margin-top: 70px; /* Space for fixed nav */
-        }
-        form {
-            background-color: #f9f9f9; /* Light gray background for form */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effec
-            width: 300px; /* Form width */
-            text-align: center;
-        }
-        form button {
-            background-color: orange; /* Button color */
-            color: white; /* Button text color */
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            width: 100%; /* Full width button */
-        }
-        form button:hover {
-            background-color: #ffcc00; /* Lighter shade on hover */
-        }
-    </style>
-</head>
-<body>
+{% extends 'peyments/add_course.html'%}
 
-    <nav>
-        <ul>
-            <li><a href="{% url 'course_list' %}">Courses</a></li>
-            <li><a href="{% url 'register' %}">Register</a></li>
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="{% url 'logout' %}">Logout</a></li>
-            <li><a href="{% url 'make_payment' 1 %}">Payments</a></li> <!-- Adjust the payment URL -->
-        </ul>
-    </nav>
-
+{% block body%}
     <h1>Available Courses</h1>
 
-    <!-- Display available courses -->
+  # Display available courses
     <div class="course-list">
         <ul>
             {% for course in courses %}
@@ -93,13 +14,12 @@
         </ul>
     </div>
 
-    <!-- Admin options to add a course -->
+# Admin options to add a course 
     {% if is_admin %}
         <div class="admin-controls">
             <h3>Admin Controls</h3>
             <a href="{% url 'add_course' %}">Add New Course</a>
         </div>
     {% endif %}
-
-</body>
-</html>
+    
+{% endblock %}

@@ -15,6 +15,8 @@ def make_payment(request, registration_id):
             return redirect('payment_success')
     else:
         form = PaymentForm()
-    return render(request, 'payments/make_payment.html', {'form': form, 'registration': registration})
+    return render(request, 'payments/make_payment.html', {
+        'form': form, 'registration': registration
+        })
 
 # Create your views here.

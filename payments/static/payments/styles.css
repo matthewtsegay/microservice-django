@@ -1,0 +1,71 @@
+ body {
+                font-family: Arial, sans-serif;
+                background-color: white; /* White background */
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+
+            nav {
+                background-color: orange; /* Orange background for navigation */
+                width: 100%;
+                padding: 10px 0;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0 20px; /* Spacing between navigation items */
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: white; /* White text color */
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+
+            nav ul li a:hover {
+                color: #ffcc00; /* Lighter shade of orange on hover */
+            }
+
+            h2 {
+                color: orange; /* Heading color */
+                margin-top: 70px; /* Space for fixed nav */
+            }
+
+            form {
+                background-color: #f9f9f9; /* Light gray background for form */
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+                width: 300px; /* Form width */
+                text-align: center;
+            }
+
+            form button {
+                background-color: orange; /* Button color */
+                color: white; /* Button text color */
+                border: none;
+                border-radius: 5px;
+                padding: 10px 15px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                width: 100%; /* Full width button */
+            }
+
+            form button:hover {
+                background-color: #ffcc00;}

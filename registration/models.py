@@ -1,5 +1,5 @@
-from django.db import models
-from django.db import models
+from django.db import models # type: ignore
+from django.db import models # type: ignore
 from users.models import User
 from course_catalog.models import Course
 
