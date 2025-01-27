@@ -5,7 +5,12 @@ from .forms import CustomUserCreationForm
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from users.models import User
+""" from django.shortcuts import redirect
 
+    def home_redirect(request):
+        return redirect('login')
+
+    """
 
 def register(request):
     if request.method == 'POST':

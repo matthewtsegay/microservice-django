@@ -4,6 +4,7 @@ from .models import Registration
 from .forms import RegistrationForm
 from course_catalog.models import Course
 
+
 def register_for_course(request, course_id):
     course = get_object_or_404(Course, id=course_id)
     if request.method == 'POST':

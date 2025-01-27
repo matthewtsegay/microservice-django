@@ -1,5 +1,4 @@
-{% load static %}
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Add Course</title>
@@ -15,11 +14,7 @@
         <li><a href="{% url 'make_payment'  %}">Payments</a></li>
     </ul>
     </nav>
-    <h2>Add New Course</h2>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Add Course</button>
-    </form>
+    {% body block %}
+    {% end block %}
 </body>
 </html>
