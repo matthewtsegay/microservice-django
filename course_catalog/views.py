@@ -1,4 +1,4 @@
-from django.shortcuts import render
+
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Course
 from .forms import CourseForm
@@ -23,7 +23,6 @@ def course_list(request):
         'is_admin': request.user.is_authenticated and request.user.is_admin,  # Check if the user is admin
     }
     return render(request, 'course_catalog/course_list.html', context)
-
 
 def add_course(request):
     if request.method == 'POST':

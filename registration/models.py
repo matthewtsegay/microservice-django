@@ -10,5 +10,3 @@ class Registration(models.Model):
 
     def __str__(self):
         return f'{self.student.username} registered for {self.course.name}'
-
-# Create your models here.

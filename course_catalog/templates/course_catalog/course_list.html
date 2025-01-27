@@ -1,9 +1,7 @@
-{% extends 'peyments/add_course.html'%}
+{% extends 'payments/add_course.html'%}
 
 {% block body%}
     <h1>Available Courses</h1>
-
-  # Display available courses
     <div class="course-list">
         <ul>
             {% for course in courses %}
@@ -13,8 +11,6 @@
             {% endfor %}
         </ul>
     </div>
-
-# Admin options to add a course 
     {% if is_admin %}
         <div class="admin-controls">
             <h3>Admin Controls</h3>

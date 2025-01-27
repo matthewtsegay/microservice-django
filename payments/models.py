@@ -9,4 +9,4 @@ class Payment(models.Model):
     def __str__(self):
         return f'Payment for {self.registration.student.username} - {self.amount}'
 
-# Create your models here.
+
